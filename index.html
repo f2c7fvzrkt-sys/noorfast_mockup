@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-  <title>NoorFast – Merged Mockups (v5)</title>
+  <title>NoorFast – Mockup v7 (v1.1 features)</title>
   <style>
     :root{
       --deep: #0b3a2b;
@@ -18,7 +18,6 @@
       --danger: #dc4c49;
       --shadow: 0 10px 28px rgba(3, 27, 20, .12);
       --radius-lg: 18px;
-      --radius-md: 14px;
     }
     * { box-sizing: border-box; }
     html, body { background: var(--bg); margin:0; font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji"; color:#0a0e0d; }
@@ -28,22 +27,22 @@
     .screen { position:absolute; inset:52px 0 74px 0; overflow:auto; padding:16px; display:none; }
     .screen.active { display:block; }
     .screen::before{
-      content:""; position:absolute; inset:0; pointer-events:none; opacity:.08; background-size:cover; background-repeat:no-repeat; background-position:center;
-      filter: saturate(.8) contrast(.9);
+      content:""; position:absolute; inset:0; pointer-events:none; opacity:.18; background-size:cover; background-repeat:no-repeat; background-position:center;
+      filter: saturate(.95) contrast(.95);
     }
     #home.screen::before{
       background-image:
-        radial-gradient(circle at 10% 10%, #0b3a2b 0 1px, transparent 2px),
-        radial-gradient(circle at 30% 30%, #0b3a2b 0 1px, transparent 2px),
-        radial-gradient(circle at 50% 50%, #0b3a2b 0 1px, transparent 2px),
-        radial-gradient(circle at 70% 70%, #0b3a2b 0 1px, transparent 2px),
-        radial-gradient(circle at 90% 30%, #0b3a2b 0 1px, transparent 2px);
+        radial-gradient(circle at 10% 10%, #0b3a2b 0 1.6px, transparent 2.8px),
+        radial-gradient(circle at 30% 30%, #0b3a2b 0 1.6px, transparent 2.8px),
+        radial-gradient(circle at 50% 50%, #0b3a2b 0 1.6px, transparent 2.8px),
+        radial-gradient(circle at 70% 70%, #0b3a2b 0 1.6px, transparent 2.8px),
+        radial-gradient(circle at 90% 30%, #0b3a2b 0 1.6px, transparent 2.8px);
       background-size: 120px 120px;
     }
     #quran.screen::before{
       background-image: url('data:image/svg+xml;utf8,\
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 1600">\
-          <g fill="%230b3a2b" opacity="0.12">\
+          <g fill="%230b3a2b" opacity="0.26">\
             <path d="M50,200 C200,80 380,120 520,180 C680,250 760,350 760,450 C760,580 620,640 520,700 C400,770 340,860 360,960 C380,1060 480,1120 600,1160 C700,1194 780,1240 780,1320 C780,1420 680,1500 520,1520 C360,1540 200,1490 120,1420" stroke="none"/>\
             <path d="M120,100 C260,60 420,100 520,160 C640,232 700,320 700,400 C700,500 620,560 520,620 C420,680 360,760 380,840 C400,920 500,980 600,1020" stroke="none"/>\
           </g>\
@@ -51,30 +50,30 @@
       background-size: cover;
     }
     #fasts.screen::before{
-      background-image: radial-gradient(ellipse at 85% 12%, #0b3a2b 0 40px, transparent 42px), radial-gradient(circle at 78% 18%, #0b3a2b 0 3px, transparent 4px), radial-gradient(circle at 90% 22%, #0b3a2b 0 2px, transparent 3px);
+      background-image: radial-gradient(ellipse at 85% 12%, #0b3a2b 0 48px, transparent 50px), radial-gradient(circle at 78% 18%, #0b3a2b 0 3px, transparent 4px), radial-gradient(circle at 90% 22%, #0b3a2b 0 2px, transparent 3px);
     }
     #qibla.screen::before{
       background-image: url('data:image/svg+xml;utf8,\
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 120">\
-          <rect width="800" height="120" fill="transparent"/>\
-          <g fill="%230b3a2b">\
-            <path d="M0,120 L0,90 40,90 40,70 60,70 60,50 80,50 80,120 Z"/>\
-            <path d="M110,120 L110,60 125,60 125,20 135,20 135,60 150,60 150,120 Z"/>\
-            <path d="M190,120 L190,65 210,65 210,45 230,45 230,65 250,65 250,120 Z"/>\
-            <path d="M290,120 L290,55 305,55 305,15 315,15 315,55 330,55 330,120 Z"/>\
-            <path d="M360,120 L360,80 380,80 380,60 400,60 400,80 420,80 420,120 Z"/>\
-            <path d="M450,120 L450,65 470,65 470,45 490,45 490,65 510,65 510,120 Z"/>\
-            <path d="M540,120 L540,75 560,75 560,55 580,55 580,75 600,75 600,120 Z"/>\
-            <path d="M630,120 L630,60 650,60 650,40 670,40 670,60 690,60 690,120 Z"/>\
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 140">\
+          <rect width="800" height="140" fill="transparent"/>\
+          <g fill="%230b3a2b" opacity="0.9">\
+            <path d="M0,140 L0,100 40,100 40,78 60,78 60,60 80,60 80,140 Z"/>\
+            <path d="M110,140 L110,70 125,70 125,25 135,25 135,70 150,70 150,140 Z"/>\
+            <path d="M190,140 L190,75 210,75 210,55 230,55 230,75 250,75 250,140 Z"/>\
+            <path d="M290,140 L290,65 305,65 305,20 315,20 315,65 330,65 330,140 Z"/>\
+            <path d="M360,140 L360,90 380,90 380,70 400,70 400,90 420,90 420,140 Z"/>\
+            <path d="M450,140 L450,75 470,75 470,55 490,55 490,75 510,75 510,140 Z"/>\
+            <path d="M540,140 L540,85 560,85 560,65 580,65 580,85 600,85 600,140 Z"/>\
+            <path d="M630,140 L630,70 650,70 650,50 670,50 670,70 690,70 690,140 Z"/>\
           </g>\
         </svg>');
-      background-position: bottom center; background-size: 100% 120px;
+      background-position: bottom center; background-size: 100% 140px;
     }
     #journal.screen::before{
-      background-image: radial-gradient(200px 200px at 100% 0%, #0b3a2b 0, transparent 60%), radial-gradient(160px 160px at 90% 10%, #0b3a2b 0, transparent 55%);
+      background-image: radial-gradient(240px 240px at 100% 0%, #0b3a2b 0, transparent 64%), radial-gradient(190px 190px at 90% 10%, #0b3a2b 0, transparent 59%);
     }
     #hydration.screen::before{
-      background-image: radial-gradient(80px 20px at 50% 10%, #0b3a2b 0, transparent 70%), radial-gradient(80px 20px at 30% 18%, #0b3a2b 0, transparent 70%), radial-gradient(80px 20px at 70% 26%, #0b3a2b 0, transparent 70%);
+      background-image: radial-gradient(100px 28px at 50% 10%, #0b3a2b 0, transparent 75%), radial-gradient(100px 28px at 30% 18%, #0b3a2b 0, transparent 75%), radial-gradient(100px 28px at 70% 26%, #0b3a2b 0, transparent 75%);
     }
     #nafl.screen::before{
       background-image:
@@ -83,6 +82,9 @@
         radial-gradient(circle at 26% 14%, #0b3a2b 0 3px, transparent 4px);
       background-size: 160px 100px;
     }
+    #prayer.screen::before{
+      background-image: linear-gradient(180deg, rgba(11,58,43,.10), transparent 30%), radial-gradient(160px 160px at 95% 5%, #0b3a2b 0, transparent 60%);
+    }
 
     .title { font-size:22px; font-weight:800; margin:0 0 8px; color: var(--deep-700); letter-spacing:.2px; }
     .subtitle { color: var(--muted); margin:-2px 0 12px 0; }
@@ -90,7 +92,8 @@
     .card h3 { margin:0 0 8px; color: var(--deep-700); font-size:16px; }
     .row { display:flex; gap: 10px; align-items:stretch; }
     .col { flex:1; }
-    .pill { display:inline-flex; align-items:center; gap:6px; padding:6px 10px; border-radius:999px; background: #e9f8f7; color: #0e6d68; font-size:12px; }
+    .pill { display:inline-flex; align-items:center; gap:6px; padding:6px 10px; border-radius:999px; background: #e9f8f7; color: #0e6d68; font-size:12px; cursor:pointer; border:1px solid #d7f1ef; }
+    .pill.active { background:#ccf1ee; border-color:#b9ebe7; }
     .dot { width:8px; height:8px; border-radius:50%; background: var(--teal); display:inline-block; }
     .btn { display:inline-flex; align-items:center; justify-content:center; gap:8px; padding:12px 14px; border-radius:14px; border:none; background: var(--deep); color:#fff; font-weight:700; cursor:pointer; box-shadow: 0 6px 14px rgba(11,58,43,.24); transition: transform .06s ease; }
     .btn:active { transform: translateY(1px) scale(.99); }
@@ -113,8 +116,6 @@
     .link { color: var(--deep); text-decoration: underline; cursor:pointer; }
     .greet { font-weight:900; color: var(--deep-700); font-size:18px; }
     .muted { color: var(--muted); }
-    .hero { padding:32px 26px; text-align:center; color:#fff; border-radius:22px; background:linear-gradient(135deg, var(--deep), #15624b); }
-    .hero .tagline { opacity:.95; line-height:1.4; }
     .tabs { display:flex; gap:8px; background:#eaf4f1; padding:6px; border-radius:12px; width: fit-content; }
     .tab { padding:8px 12px; border-radius:10px; cursor:pointer; font-weight:700; color:#2d4b42; }
     .tab.active { background:#fff; color: var(--deep); box-shadow: 0 2px 8px rgba(0,0,0,.06); }
@@ -122,11 +123,6 @@
     .ar { font-family: 'Scheherazade', 'Amiri', serif; font-size:20px; line-height:1.8; direction: rtl; text-align:right; color:#0c3f30; }
     .en { margin-top:6px; color:#1d2b27; }
     .ayah .ref { font-size:12px; color:#577269; margin-top:8px; }
-    .modal-backdrop { position:fixed; inset:0; background: rgba(0,0,0,.35); display:none; align-items:flex-end; justify-content:center; }
-    .modal-backdrop.show { display:flex; }
-    .modal { width:100%; max-width: 520px; background:#fff; border-radius: 20px 20px 0 0; padding:18px; box-shadow: 0 -18px 40px rgba(0,0,0,.28); max-height: 88vh; overflow:auto; position: relative; }
-    .modal h3 { margin:0 0 8px; color: var(--deep-700); }
-    .modal .close { background:none; border:none; font-size:24px; line-height:1; color: #274e43; position:absolute; right:18px; top:6px; cursor:pointer; }
     .mono { font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; font-size:12px; color:#28554a; background:#f3faf9; padding:10px; border-radius:10px; border:1px dashed #dfe7e5; white-space: pre-wrap; }
     .switch { position: relative; display: inline-block; width: 50px; height: 28px; }
     .switch input { opacity: 0; width: 0; height: 0; }
@@ -134,12 +130,14 @@
     .slider:before { position: absolute; content: ""; height: 22px; width: 22px; left: 3px; bottom: 3px; background-color: white; transition: .2s; border-radius: 50%; box-shadow: 0 1px 4px rgba(0,0,0,.2); }
     input:checked + .slider { background-color: var(--teal); }
     input:checked + .slider:before { transform: translateX(22px); }
+    .ring { width:74px; height:74px; border-radius:50%; background: conic-gradient(var(--teal) var(--pct), #e6efec 0); display:grid; place-items:center; font-weight:800; color:#0f3d2e; }
   </style>
 </head>
 <body>
   <div class="phone">
     <div class="appbar">NoorFast</div>
 
+    <!-- HOME -->
     <div class="screen active" id="home">
       <div class="greet">Assalamu alaikum, Aisha 👋</div>
       <div class="muted" style="margin-bottom:12px;">Today is Mar 22. Ramadan day 1.</div>
@@ -151,24 +149,71 @@
           <div class="col"><div class="label">Iftar</div><div class="value">18:27</div></div>
           <div class="col"><div class="label">Duration</div><div class="value">13h 25m</div></div>
         </div>
+        <div class="inline" style="margin-top:10px;">
+          <button class="btn secondary" onclick="downloadICS('Suhoor','2025-03-22T05:02:00')">Add Suhoor to Calendar</button>
+          <button class="btn secondary" onclick="downloadICS('Iftar','2025-03-22T18:27:00')">Add Iftar to Calendar</button>
+        </div>
+        <div class="hint">Travelling? <span class="link" onclick="switchTo('prayer')">Quickly change city</span></div>
       </div>
 
-      <div class="card">
-        <h3>Quick actions</h3>
-        <div class="row">
-          <button class="btn col" onclick="switchTo('journal')">📝 Journal</button>
-          <button class="btn col" onclick="switchTo('hydration')">💧 Hydration</button>
-          <button class="btn col" onclick="switchTo('quran')">📖 Quran</button>
-          <button class="btn col" onclick="switchTo('qibla')">🧭 Qibla</button>
+      <!-- Streaks + Reading goal -->
+      <div class="row">
+        <div class="card col">
+          <h3>Streaks</h3>
+          <div class="row">
+            <div class="col"><div class="label">Fasting</div><div class="value">3 days 🔥</div></div>
+            <div class="col"><div class="label">Hydration</div><div class="value">2 days 💧</div></div>
+            <div class="col"><div class="label">Qur’an</div><div class="value">4 days 📖</div></div>
+          </div>
+        </div>
+        <div class="card col">
+          <h3>Reading goal</h3>
+          <div class="row" style="align-items:center;">
+            <div class="ring" id="goalRing" style="--pct:50%;">50%</div>
+            <div class="col">
+              <div class="value">2 / 4 pages</div>
+              <div class="label">today’s goal</div>
+              <div class="hint"><span class="link" onclick="switchTo('quran')">Continue reading</span></div>
+            </div>
+          </div>
         </div>
       </div>
 
+      <!-- Quick actions: fuller grid -->
       <div class="card">
-        <h3>Daily guidance</h3>
-        <div class="mono">“And He found you lost and guided you.” — Q 93:7 (Pickthall)</div>
+        <h3>Quick actions</h3>
+        <div class="row" style="margin-bottom:8px;">
+          <button class="btn col" onclick="switchTo('journal')">📝 Journal</button>
+          <button class="btn col" onclick="switchTo('hydration')">💧 Hydration</button>
+          <button class="btn col" onclick="switchTo('quran')">📖 Quran</button>
+        </div>
+        <div class="row">
+          <button class="btn col" onclick="switchTo('qibla')">🧭 Mosque Finder</button>
+          <button class="btn col" onclick="openSuhoor()">🍽️ Suhoor idea</button>
+          <button class="btn col" onclick="openIftar()">🧉 Iftar idea</button>
+        </div>
+      </div>
+
+      <!-- AI Meal suggestions card -->
+      <div class="card">
+        <h3>Need Suhoor or Iftar ideas?</h3>
+        <div class="subtitle">Simple, realistic suggestions based on your day.</div>
+        <div class="row" style="margin-bottom:6px;">
+          <button class="btn col" onclick="openSuhoor()">Get Suhoor plan</button>
+          <button class="btn col" onclick="openIftar()">Get Iftar plan</button>
+        </div>
+        <div class="hint">Latest: <em>“Overnight oats with chia and dates…”</em> <span class="link" onclick="openSuhoor()">View</span></div>
+      </div>
+
+      <!-- Verse/Hadith of the day with excerpt -->
+      <div class="card">
+        <h3>Verse of the day <span class="badge" style="margin-left:6px; cursor:pointer;">⭐ Save</span></h3>
+        <div class="mono">“Indeed, in the remembrance of Allah do hearts find rest.” — Q 13:28</div>
+        <div class="hint">Short excerpt with reference • <span class="link">View details</span></div>
       </div>
     </div>
 
+    <!-- FASTS LIST -->
     <div class="screen" id="fasts">
       <div class="title">Your fasts</div>
       <div class="subtitle">Track duration, energy and hunger</div>
@@ -179,6 +224,7 @@
       <button class="btn full" style="margin-top:8px;" onclick="switchTo('fastsForm')">Log today’s fast</button>
     </div>
 
+    <!-- FASTS FORM -->
     <div class="screen" id="fastsForm">
       <div class="title">Log today’s fast</div>
       <div class="card">
@@ -190,6 +236,7 @@
       </div>
     </div>
 
+    <!-- QURAN (Read + Progress) -->
     <div class="screen" id="quran">
       <div class="title">Qur’an</div>
       <div class="subtitle">Read Arabic & translation, with pagination.</div>
@@ -219,23 +266,31 @@
             <button class="btn full" onclick="goToLast()">Jump to last position</button>
           </div>
         </div>
+        <div class="row" style="margin-top:8px;">
+          <div class="col"><label class="label">Font size</label><input class="input" type="range" min="16" max="28" value="20" oninput="setFontSize(this.value)"></div>
+          <div class="col"><label class="label">Jump to ayah</label><div class="inline"><input class="input" id="jumpAyah" placeholder="e.g., 45"><button class="btn secondary" onclick="jumpToAyah()">Go</button></div></div>
+        </div>
       </div>
+
+      <!-- Read panel with pagination controls -->
       <div id="panelRead">
         <div id="ayahList"></div>
         <div class="row" style="margin-top:8px;">
           <button class="btn col" onclick="prevPage()">◀ Previous</button>
           <div class="col" style="display:flex; align-items:center; justify-content:center;">
-            <span class="badge" id="pageBadge">Page 1 / 3</span>
+            <span class="badge" id="pageBadge">Page 1 / 6</span>
           </div>
           <button class="btn col" onclick="nextPage()">Next ▶</button>
         </div>
         <div class="hint">Arabic © Tanzil (Uthmani); English translation: Pickthall (public domain). Mock content for layout.</div>
       </div>
+
+      <!-- Progress panel -->
       <div id="panelProgress" style="display:none;">
         <div class="card">
           <div class="row">
-            <div class="col"><div class="label">Total pages</div><div class="value">56</div></div>
-            <div class="col"><div class="label">Juz completed</div><div class="value">2</div></div>
+            <div class="col"><div class="label">Pages today</div><div class="value" id="pagesToday">2</div></div>
+            <div class="col"><div class="label">Goal</div><div class="value">4</div></div>
           </div>
         </div>
         <div class="list">
@@ -246,6 +301,7 @@
       </div>
     </div>
 
+    <!-- JOURNAL -->
     <div class="screen" id="journal">
       <div class="title">Your Ramadan journal</div>
       <div class="subtitle">Daily reflections and spiritual growth</div>
@@ -263,6 +319,7 @@
       </div>
     </div>
 
+    <!-- HYDRATION -->
     <div class="screen" id="hydration">
       <div class="title">Hydration today</div>
       <div class="subtitle">Staying hydrated between Maghrib and Suhoor helps you feel better</div>
@@ -274,6 +331,7 @@
       </div>
     </div>
 
+    <!-- QIBLA & MOSQUES -->
     <div class="screen" id="qibla">
       <div class="title">Qibla & nearby mosques</div>
       <div class="subtitle">Use your location to find direction and places</div>
@@ -291,6 +349,45 @@
       </div>
     </div>
 
+    <!-- PRAYER TIMES (new in v1.1) -->
+    <div class="screen" id="prayer">
+      <div class="title">Prayer Times</div>
+      <div class="subtitle">Based on your method & timezone</div>
+      <div class="card">
+        <div class="row">
+          <div class="col">
+            <label class="label">City (travel toggle)</label>
+            <select class="input">
+              <option>London</option>
+              <option>Jeddah</option>
+              <option>Karachi</option>
+              <option>Jakarta</option>
+              <option>Kuala Lumpur</option>
+            </select>
+          </div>
+          <div class="col">
+            <label class="label">View</label>
+            <div class="inline">
+              <button class="btn secondary">Day</button>
+              <button class="btn secondary">Week</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <h3>Today • Sat</h3>
+        <div class="list">
+          <div class="item"><div><div>Fajr</div><div class="meta">05:02</div></div><label class="switch"><input type="checkbox" checked><span class="slider"></span></label></div>
+          <div class="item"><div><div>Dhuhr</div><div class="meta">12:28</div></div><label class="switch"><input type="checkbox" checked><span class="slider"></span></label></div>
+          <div class="item"><div><div>Asr</div><div class="meta">15:54</div></div><label class="switch"><input type="checkbox" checked><span class="slider"></span></label></div>
+          <div class="item"><div><div>Maghrib</div><div class="meta">18:27</div></div><label class="switch"><input type="checkbox" checked><span class="slider"></span></label></div>
+          <div class="item"><div><div>Isha</div><div class="meta">19:48</div></div><label class="switch"><input type="checkbox" checked><span class="slider"></span></label></div>
+        </div>
+        <div class="hint">In-app reminders only while the app is open.</div>
+      </div>
+    </div>
+
+    <!-- NAFL FASTS -->
     <div class="screen" id="nafl">
       <div class="title">Nafl fasting days</div>
       <div class="subtitle">Upcoming recommended voluntary fasts (approx. calendar)</div>
@@ -300,13 +397,16 @@
         <div class="item"><div><div><strong>Tue, Apr 15</strong> — White Day (13th)</div><div class="meta">13th of Hijri month</div></div><button class="btn" onclick="openNaflDetail('White Days (13–15)','Fasting the middle three days of each Hijri month is recommended.','Abu Dawud 2449')">Why?</button></div>
         <div class="item"><div><div><strong>Sun, Jul 07</strong> — Day of Arafah</div><div class="meta">9 Dhul-Hijjah (non-pilgrims)</div></div><button class="btn" onclick="openNaflDetail('Day of Arafah','Fasting on Arafah expiates sins of the previous and coming year for non-pilgrims.','Muslim 1162c')">Why?</button></div>
       </div>
+      <div class="hint">Dates are approximate; please check local moonsighting and community guidance.</div>
     </div>
 
+    <!-- MORE / SETTINGS -->
     <div class="screen" id="more">
       <div class="title">More & Settings</div>
       <div class="card">
         <h3>Features</h3>
         <div class="list">
+          <div class="item" onclick="switchTo('prayer')"><div>Prayer Times</div><div>🕰️</div></div>
           <div class="item" onclick="switchTo('hydration')"><div>Hydration Tracker</div><div>💧</div></div>
           <div class="item" onclick="switchTo('qibla')"><div>Qibla & Mosque Finder</div><div>🧭</div></div>
           <div class="item" onclick="switchTo('journal')"><div>Journal</div><div>📝</div></div>
@@ -324,6 +424,7 @@
       <button class="btn full" style="background: var(--danger);">Sign out</button>
     </div>
 
+    <!-- SETTINGS -->
     <div class="screen" id="settings">
       <div class="title">Appearance</div>
       <div class="card">
@@ -331,13 +432,18 @@
           <div><div>Decorative backgrounds</div><div class="hint">Subtle minarets/calligraphy/geometric designs per screen</div></div>
           <label class="switch"><input type="checkbox" id="decorToggle" checked onchange="toggleDecor(this.checked)"><span class="slider"></span></label>
         </div>
+        <div class="row" style="margin-top:10px; gap:12px;">
+          <div class="col"><label class="label">Background intensity</label><input class="input" value="Medium-High (v7)"></div>
+        </div>
       </div>
+
       <div class="title">Notifications</div>
       <div class="card">
         <h3>Daily guidance</h3>
-        <div class="row" style="align-items:center; justify-content:space-between;"><div><div>Qur’an/Hadith reflection</div><div class="hint">One gentle reminder per day while the app is open</div></div><label class="switch"><input type="checkbox" checked><span class="slider"></span></label></div>
+        <div class="row" style="align-items:center; justify-content:space-between;"><div><div>Qur’an/Hadith reflection</div><div class="hint">One gentle reminder per day while app is open</div></div><label class="switch"><input type="checkbox" checked><span class="slider"></span></label></div>
         <div class="row" style="margin-top:8px;"><div class="col"><label class="label">Remind me at</label><input class="input" type="time" value="18:00"></div></div>
       </div>
+
       <div class="card">
         <h3>Adhan reminders</h3>
         <div class="row" style="align-items:center; justify-content:space-between;"><div><div>Prayer time notifications</div><div class="hint">Works while the app is open (no background push)</div></div><label class="switch"><input type="checkbox" checked><span class="slider"></span></label></div>
@@ -351,12 +457,14 @@
       </div>
     </div>
 
+    <!-- ABOUT -->
     <div class="screen" id="about">
       <div class="title">About NoorFast</div>
       <div class="card"><div>NoorFast is a wellbeing and reflection tool designed to support your Ramadan experience.</div><div class="hint">It does not provide medical, nutritional, or religious rulings.</div></div>
-      <div class="card"><h3>Content attribution</h3><div class="hint">Qur’an text © Tanzil (used unmodified). Pickthall translation is public domain.</div><div class="hint">Hadith notes shown are short references only; please consult scholars for rulings.</div></div>
+      <div class="card"><h3>Content attribution</h3><div class="hint">Qur’an text © Tanzil (used unmodified). Pickthall translation is public domain.</div><div class="hint">Hadith references are brief pointers; please consult scholars for rulings.</div></div>
     </div>
 
+    <!-- NAV -->
     <div class="nav">
       <button id="nav-home" class="active" onclick="switchTo('home')"><div class="icon">🏠</div><div>Home</div></button>
       <button id="nav-fasts" onclick="switchTo('fasts')"><div class="icon">🗓️</div><div>Fasts</div></button>
@@ -365,6 +473,7 @@
     </div>
   </div>
 
+  <!-- JOURNAL MODAL -->
   <div id="journalBackdrop" class="modal-backdrop" aria-hidden="true">
     <div class="modal" role="dialog" aria-modal="true">
       <button class="close" onclick="closeJournal()">×</button>
@@ -379,6 +488,50 @@
     </div>
   </div>
 
+  <!-- AI MEAL PLAN MODALS with pantry chips -->
+  <div id="suhoorModal" class="modal-backdrop" aria-hidden="true">
+    <div class="modal">
+      <button class="close" onclick="closeSuhoor()">×</button>
+      <h3>Suhoor plan for today</h3>
+      <div class="label">What do you have at home?</div>
+      <div id="suhoorChips" class="inline" style="margin-bottom:8px;"></div>
+      <div class="mono" id="suhoorText">
+• Overnight oats with chia, dates, and a spoon of peanut butter. 
+• 1–2 eggs for protein (boiled or omelette). 
+• A glass of milk or yogurt for sustained energy. 
+• Water + pinch of salt to prep hydration. 
+• Add a banana if you’ll be active in the morning.
+      </div>
+      <div class="row" style="margin-top:8px;">
+        <button class="btn col" onclick="regenerate('suhoor')">Regenerate</button>
+        <button class="btn ghost col" onclick="closeSuhoor()">Close</button>
+      </div>
+      <div class="hint">AI suggestions are general and not medical or religious advice.</div>
+    </div>
+  </div>
+
+  <div id="iftarModal" class="modal-backdrop" aria-hidden="true">
+    <div class="modal">
+      <button class="close" onclick="closeIftar()">×</button>
+      <h3>Iftar plan for today</h3>
+      <div class="label">What do you have at home?</div>
+      <div id="iftarChips" class="inline" style="margin-bottom:8px;"></div>
+      <div class="mono" id="iftarText">
+• Start with water and 2–3 dates. 
+• A small bowl of fruit (e.g., orange or berries). 
+• Light soup (e.g., lentil) to warm up digestion. 
+• Protein: grilled chicken or chickpeas. 
+• Light carbs: a small portion of rice or wholegrain wrap.
+      </div>
+      <div class="row" style="margin-top:8px;">
+        <button class="btn col" onclick="regenerate('iftar')">Regenerate</button>
+        <button class="btn ghost col" onclick="closeIftar()">Close</button>
+      </div>
+      <div class="hint">AI suggestions are general and not medical or religious advice.</div>
+    </div>
+  </div>
+
+  <!-- NAFL DETAIL MODALS -->
   <div id="naflDetail" class="modal-backdrop" aria-hidden="true">
     <div class="modal">
       <button class="close" onclick="closeNaflDetail()">×</button>
@@ -401,7 +554,7 @@
   </div>
 
   <script>
-    const screens = ['home','fasts','fastsForm','quran','journal','hydration','qibla','nafl','more','settings','about'];
+    const screens = ['home','fasts','fastsForm','quran','journal','hydration','qibla','prayer','nafl','more','settings','about'];
     const navIds = { home:'nav-home', fasts:'nav-fasts', quran:'nav-quran', more:'nav-more' };
     function switchTo(id){
       screens.forEach(s => document.getElementById(s).classList.remove('active'));
@@ -410,9 +563,73 @@
       if(navIds[id]) document.getElementById(navIds[id]).classList.add('active');
     }
     function toggleDecor(on){ document.body.classList.toggle('decor-off', !on); }
+
+    // ICS downloads
+    function two(n){ return (n<10?'0':'')+n; }
+    function downloadICS(title, iso){
+      const start = new Date(iso);
+      const end = new Date(start.getTime() + 30*60*1000);
+      const dtstamp = start.toISOString().replace(/[-:]/g,'').split('.')[0]+'Z';
+      const dtstart = dtstamp;
+      const dtend = end.toISOString().replace(/[-:]/g,'').split('.')[0]+'Z';
+      const uid = 'noorfast-'+Math.random().toString(36).slice(2)+'@noorfast.app';
+      const ics = [
+        'BEGIN:VCALENDAR','VERSION:2.0','PRODID:-//NoorFast//EN',
+        'BEGIN:VEVENT',
+        'UID:'+uid,
+        'DTSTAMP:'+dtstamp,
+        'DTSTART:'+dtstart,
+        'DTEND:'+dtend,
+        'SUMMARY:'+title+' (NoorFast)',
+        'DESCRIPTION:'+title+' reminder from NoorFast',
+        'END:VEVENT','END:VCALENDAR'
+      ].join('\r\n');
+      const blob = new Blob([ics], {type:'text/calendar;charset=utf-8'});
+      const url = URL.createObjectURL(blob);
+      const a = document.createElement('a'); a.href = url; a.download = title.toLowerCase() + '.ics'; a.click();
+      setTimeout(()=>URL.revokeObjectURL(url), 1500);
+    }
+
+    // Journal modal
     function openJournalDetail(date){ document.getElementById('journalTitle').innerText = 'Journal — ' + date; document.getElementById('journalBackdrop').classList.add('show'); document.getElementById('journalBackdrop').setAttribute('aria-hidden','false'); }
     function closeJournal(){ document.getElementById('journalBackdrop').classList.remove('show'); document.getElementById('journalBackdrop').setAttribute('aria-hidden','true'); }
     document.getElementById('journalBackdrop').addEventListener('click', (e)=>{ if(e.target.id==='journalBackdrop') closeJournal(); });
+
+    // AI meal plan modals + pantry chips
+    const pantry = ['eggs','oats','yogurt','milk','dates','bananas','rice','chicken','chickpeas','bread','olive oil','berries'];
+    function chip(el){ el.classList.toggle('active'); }
+    function buildChips(){
+      const make = (id)=>{
+        const wrap = document.getElementById(id);
+        wrap.innerHTML = '';
+        pantry.forEach(p=>{
+          const s = document.createElement('span'); s.className='pill'; s.innerText=p; s.onclick=()=>chip(s); wrap.appendChild(s);
+        });
+      };
+      make('suhoorChips'); make('iftarChips');
+    }
+    function picked(id){
+      const wrap = document.getElementById(id);
+      return Array.from(wrap.querySelectorAll('.pill.active')).map(x=>x.innerText);
+    }
+    function regenerate(kind){
+      const list = picked(kind==='suhoor'?'suhoorChips':'iftarChips');
+      const head = (list.length? ('Using: ' + list.slice(0,5).join(', ')+'.\\n') : '');
+      if(kind==='suhoor'){
+        document.getElementById('suhoorText').innerText = head + '• Overnight oats with ' + (list.includes('oats')?'your oats, ': 'oats, ') + (list.includes('yogurt')?'yogurt, ':'milk, ') + 'and dates.\n• Add eggs for protein if available.\n• Include a fruit (banana/berries) and water.\n• Keep it light and steady.';
+      }else{
+        document.getElementById('iftarText').innerText = head + '• Water + 2–3 dates to open.\n• Fruit or light soup.\n• Protein: '+ (list.includes('chicken')?'grilled chicken':'chickpeas or eggs') +'.\n• Light carbs: '+ (list.includes('rice')?'a small serving of rice':'wholegrain bread/wrap') +'.\n• Pause, then eat slowly.';
+      }
+    }
+    function openSuhoor(){ document.getElementById('suhoorModal').classList.add('show'); document.getElementById('suhoorModal').setAttribute('aria-hidden','false'); }
+    function closeSuhoor(){ document.getElementById('suhoorModal').classList.remove('show'); document.getElementById('suhoorModal').setAttribute('aria-hidden','true'); }
+    document.getElementById('suhoorModal').addEventListener('click', (e)=>{ if(e.target.id==='suhoorModal') closeSuhoor(); });
+
+    function openIftar(){ document.getElementById('iftarModal').classList.add('show'); document.getElementById('iftarModal').setAttribute('aria-hidden','false'); }
+    function closeIftar(){ document.getElementById('iftarModal').classList.remove('show'); document.getElementById('iftarModal').setAttribute('aria-hidden','true'); }
+    document.getElementById('iftarModal').addEventListener('click', (e)=>{ if(e.target.id==='iftarModal') closeIftar(); });
+
+    // Nafl modals
     function openNaflDetail(title, body, ref){ document.getElementById('naflTitle').innerText = title; document.getElementById('naflBody').innerText = body; document.getElementById('naflRef').innerText = 'Reference: ' + ref; document.getElementById('naflDetail').classList.add('show'); document.getElementById('naflDetail').setAttribute('aria-hidden', 'false'); }
     function closeNaflDetail(){ document.getElementById('naflDetail').classList.remove('show'); document.getElementById('naflDetail').setAttribute('aria-hidden', 'true'); }
     document.getElementById('naflDetail').addEventListener('click', (e)=>{ if(e.target.id==='naflDetail') closeNaflDetail(); });
@@ -420,29 +637,37 @@
     function closeNaflInfo(){ document.getElementById('naflInfo').classList.remove('show'); document.getElementById('naflInfo').setAttribute('aria-hidden', 'true'); }
     document.getElementById('naflInfo').addEventListener('click', (e)=>{ if(e.target.id==='naflInfo') closeNaflInfo(); });
 
-    // Quran pagination
+    // Quran pagination + font size + jump
     const AYAH_PER_PAGE = 10;
-    const sampleAyahs = Array.from({length:30}).map((_,i)=> ({ ar: 'آية ' + (i+1) + ' — هذا نص عربي تجريبي لإظهار التخطيط.', en: 'Ayah ' + (i+1) + ' — sample English translation text for layout. (Pickthall)', ref: 'Al-Baqarah 2:' + (i+1) }));
-    let currentPage = 1, lastPosition = 1;
+    const totalAyah = 60;
+    const sampleAyahs = Array.from({length:totalAyah}).map((_,i)=> ({ ar: 'آية ' + (i+1) + ' — نص عربي تجريبي لعرض التخطيط.', en: 'Ayah ' + (i+1) + ' — sample English translation text for layout. (Pickthall)', ref: 'Al-Baqarah 2:' + (i+1) }));
+    let currentPage = 1, lastPosition = 1, fontSize = 20, pagesReadToday = 2;
     function renderPage(){
       const start = (currentPage-1)*AYAH_PER_PAGE;
       const pageItems = sampleAyahs.slice(start, start + AYAH_PER_PAGE);
       const list = document.getElementById('ayahList'); list.innerHTML = '';
-      pageItems.forEach(a => { const card = document.createElement('div'); card.className = 'ayah'; card.innerHTML = `<div class="ar">${a.ar}</div><div class="en">${a.en}</div><div class="ref">${a.ref}</div>`; list.appendChild(card); });
+      pageItems.forEach(a => { const card = document.createElement('div'); card.className = 'ayah'; card.innerHTML = `<div class="ar" style="font-size:${fontSize}px">${a.ar}</div><div class="en">${a.en}</div><div class="ref">${a.ref}</div>`; list.appendChild(card); });
       const totalPages = Math.ceil(sampleAyahs.length/AYAH_PER_PAGE);
       document.getElementById('pageBadge').innerText = 'Page ' + currentPage + ' / ' + totalPages;
       lastPosition = start + 1;
       document.getElementById('panelRead').scrollTo({top:0, behavior:'smooth'});
     }
-    function nextPage(){ const totalPages = Math.ceil(sampleAyahs.length/AYAH_PER_PAGE); if(currentPage < totalPages){ currentPage++; } renderPage(); }
+    function nextPage(){ const totalPages = Math.ceil(sampleAyahs.length/AYAH_PER_PAGE); if(currentPage < totalPages){ currentPage++; pagesReadToday++; updateGoal(); } renderPage(); }
     function prevPage(){ if(currentPage > 1){ currentPage--; } renderPage(); }
     function goToLast(){ currentPage = Math.ceil(lastPosition/AYAH_PER_PAGE) || 1; renderPage(); }
-    function toggleQuranTab(which){ const read = document.getElementById('panelRead'); const prog = document.getElementById('panelProgress'); const tr = document.getElementById('tabRead'); const tp = document.getElementById('tabProgress'); if(which==='read'){ read.style.display='block'; prog.style.display='none'; tr.classList.add('active'); tp.classList.remove('active'); } else { read.style.display='none'; prog.style.display='block'; tr.classList.remove('active'); tp.classList.add('active'); } }
-    function toggleLang(mode){ const ar = document.querySelectorAll('.ayah .ar'); const en = document.querySelectorAll('.ayah .en'); ar.forEach(a => a.style.display = (mode==='en') ? 'none':'block'); en.forEach(e => e.style.display = (mode==='ar') ? 'none':'block'); }
-    function resetQuran(){ currentPage = 1; renderPage(); }
+    function setFontSize(v){ fontSize = Number(v); renderPage(); }
+    function jumpToAyah(){ const n = Number(document.getElementById('jumpAyah').value||1); currentPage = Math.max(1, Math.min(Math.ceil(n/AYAH_PER_PAGE), Math.ceil(sampleAyahs.length/AYAH_PER_PAGE))); renderPage(); }
+    function updateGoal(){
+      const goal = 4;
+      const pct = Math.min(100, Math.round((pagesReadToday/goal)*100));
+      const ring = document.getElementById('goalRing');
+      ring.style.setProperty('--pct', pct+'%');
+      ring.innerText = pct+'%';
+      document.getElementById('pagesToday').innerText = Math.min(pagesReadToday, goal);
+    }
 
     // init
-    renderPage();
+    renderPage(); buildChips(); updateGoal();
   </script>
 </body>
 </html>
